@@ -71,9 +71,3 @@ JWT_SECRET=cp363205_secret_super_key_jwt_2026
    - งานตัวอย่าง: อ่านทบทวน Data Serialization, นัดซ้อมนำเสนอผ่าน Zoom
 
 ---
-
-## 📑 เอกสารสนับสนุนการทำเล่มรายงานและสไลด์นำเสนอ
-
-เอกสารสำหรับการจัดทำเล่มรายงานสมบูรณ์ตามหัวข้อข้อ 3 และ 6 จัดเตรียมไว้ที่:
-- [JSON Map Structure (docs/JSON_MAP_STRUCTURE.md)](docs/JSON_MAP_STRUCTURE.md): อธิบายโครงสร้างข้อมูล JSON สำหรับนำไปใส่ในหัวข้อ 3.d
-- [API Map Structure (docs/API_MAP_STRUCTURE.md)](docs/API_MAP_STRUCTURE.md): ตารางและสเปกการเรียก API ทุก Endpoint สำหรับหัวข้อ 3.e

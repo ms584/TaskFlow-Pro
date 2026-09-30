@@ -60,3 +60,10 @@ desktop.ini
 .vite/
 client/.vite/
 .eslintcache
+
+# ==========================================
+# Documents & Presentation (เอกสารนำเสนอและรายงาน)
+# ==========================================
+docs/
+*.docx
+*.pdf
