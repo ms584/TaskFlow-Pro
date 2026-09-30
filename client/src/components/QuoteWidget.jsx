@@ -1,12 +1,11 @@
 /**
  * @file QuoteWidget.jsx
  * @description คอมโพเนนต์แสดงคำคมสร้างแรงบันดาลใจและข้อคิดการจัดการเวลา
- * เชื่อมต่อกับ External API (ตามข้อกำหนดของรายวิชาข้อ 4.f)
- * รายวิชา CP363205 ภาษาอนุกรมข้อมูลและการประยุกต์
+ * เชื่อมต่อกับ External Quotes API เพื่อสร้างแรงกระตุ้นในการทำงาน
  */
 
 import React, { useState, useEffect } from 'react';
-import { Sparkles, RefreshCw, Quote } from 'lucide-react';
+import { Sparkles, RefreshCw } from 'lucide-react';
 import { api } from '../services/api';
 
 export default function QuoteWidget() {
@@ -41,14 +40,14 @@ export default function QuoteWidget() {
       <div className="quote-header">
         <div className="quote-tag">
           <Sparkles size={14} />
-          <span>Daily Inspiration & Productivity (External API - ข้อ 4.f)</span>
+          <span>Daily Productivity & Motivation</span>
         </div>
         <button
           className="btn-icon btn"
           style={{ width: '30px', height: '30px' }}
           onClick={fetchQuote}
           disabled={loading}
-          title="สุ่มคำคมใหม่จาก External API"
+          title="สุ่มข้อความใหม่"
         >
           <RefreshCw size={13} className={loading ? 'animate-spin' : ''} />
         </button>
@@ -60,7 +59,9 @@ export default function QuoteWidget() {
 
       <div className="quote-author">
         <span>— {quote.author}</span>
-        {quote.source && <span className="quote-source">{quote.source}</span>}
+        {quote.category && (
+          <span className="quote-source">{quote.category}</span>
+        )}
       </div>
     </div>
   );

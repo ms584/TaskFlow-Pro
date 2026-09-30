@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
         console.warn('ไม่สามารถโหลด Demo Users ได้:', err.message);
       }
 
-      // หากมี Token ค้างอยู่ ให้ตรวจสอบว่าเป็นของใคร
+      // หากมี Token ค้างอยู่ ให้ตรวจสอบความถูกต้องของ Token
       if (token) {
         try {
           const res = await api.getMe();
@@ -42,10 +42,8 @@ export const AuthProvider = ({ children }) => {
           console.warn('Token หมดอายุหรือไม่ถูกต้อง ทำการ Logout:', err.message);
           logout();
         }
-      } else {
-        // หากยังไม่ได้ Login ให้ตั้งค่าเริ่มต้นเป็น User 1 อัตโนมัติเพื่อให้เห็นข้อมูลทันที
-        await quickLoginUser1();
       }
+      // หากไม่มี token ให้คงสถานะ user เป็น null เพื่อแสดงหน้า Welcome / Login ตามมาตรฐานแอปจริง
       setLoading(false);
     };
 
