@@ -5,7 +5,11 @@
  * รายวิชา CP363205 ภาษาอนุกรมข้อมูลและการประยุกต์
  */
 
-const BASE_URL = '/api';
+// รองรับทั้ง Localhost Proxy และ Production URL บน Render ผ่าน VITE_API_URL
+const API_ORIGIN = import.meta.env.VITE_API_URL
+  ? import.meta.env.VITE_API_URL.replace(/\/$/, '')
+  : '';
+const BASE_URL = `${API_ORIGIN}/api`;
 
 /**
  * ฟังก์ชันกลางสำหรับส่ง HTTP Request
