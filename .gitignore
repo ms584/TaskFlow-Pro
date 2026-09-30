@@ -1,0 +1,62 @@
+# ==========================================
+# Dependencies (โฟลเดอร์แพ็กเกจ)
+# ==========================================
+node_modules/
+*/node_modules/
+
+# ==========================================
+# Environment Variables (ไฟล์เก็บความลับ/คีย์การเชื่อมต่อ)
+# ละเว้น .env เพื่อความปลอดภัย แต่เก็บ .env.example ไว้เป็นตัวอย่าง
+# ==========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+server/.env
+client/.env
+*.env
+!*.env.example
+
+# ==========================================
+# Production Build Outputs (ไฟล์ผลลัพธ์จากการ Build)
+# ==========================================
+dist/
+dist-ssr/
+build/
+client/dist/
+
+# ==========================================
+# Log Files (ไฟล์บันทึกประวัติการทำงาน)
+# ==========================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==========================================
+# Editor & OS Files (ไฟล์ของระบบปฏิบัติการและ IDE)
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ==========================================
+# Vite & Cache
+# ==========================================
+.vite/
+client/.vite/
+.eslintcache

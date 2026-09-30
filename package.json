@@ -1,0 +1,21 @@
+{
+  "name": "mern-todo-project",
+  "version": "1.0.0",
+  "description": "Full-stack MERN To-Do List Application for CP363205 Data Serialization Languages and Applications",
+  "scripts": {
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "seed": "npm --prefix server run seed"
+  },
+  "keywords": [
+    "mern",
+    "mongodb",
+    "express",
+    "react",
+    "nodejs",
+    "crud",
+    "cp363205"
+  ],
+  "author": "Computer Science Student",
+  "license": "ISC"
+}
