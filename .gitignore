@@ -67,6 +67,7 @@ client/.vite/
 docs/
 *.docx
 *.pdf
+!slide/*.pdf
 
 # ==========================================
 # Output Folder
